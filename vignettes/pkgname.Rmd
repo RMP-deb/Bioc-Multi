@@ -1,0 +1,58 @@
+---
+title: "Introduction to pkgname"
+author:
+- name: First Last
+  affiliation: Institution
+  email: first.last@example.com
+package: pkgname
+output:
+    BiocStyle::html_document
+abstract: |
+    One paragraph describing what pkgname does and what this vignette covers.
+vignette: >
+    %\VignetteIndexEntry{Introduction to pkgname}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---
+
+```{r knitr-options, include = FALSE}
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>"
+)
+```
+
+# Introduction
+
+Describe the problem pkgname solves, the kind of data it works with, and how
+it relates to other Bioconductor packages. Use Bioconductor classes such as
+`SummarizedExperiment` or `GRanges` for inputs and outputs where they fit.
+
+# Installation
+
+```{r install, eval = FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager")
+}
+BiocManager::install("pkgname")
+```
+
+# Getting started
+
+```{r setup}
+library(pkgname)
+```
+
+Replace this with a worked example on real (small) data.
+
+```{r example}
+hello("Bioconductor")
+sumSquaresCpp(c(1, 2, 3))    # C++ example
+sumSquaresRust(c(1, 2, 3))   # Rust example
+```
+
+# Session information
+
+```{r sessionInfo, echo = FALSE}
+sessionInfo()
+```
